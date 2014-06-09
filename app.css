@@ -1,0 +1,38 @@
+.intro {
+	height:100%;
+	width:100%;
+	background:#AFAFAF;
+	color:#FFFFFF;
+	position:absolute;
+	top:0;
+	left: 0;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.anchor {
+	font-size:50px;
+	text-transform: uppercase;
+	top:50%;
+	display: inline-block;
+	position: relative;
+	margin-top: -25px;
+}
+
+.anchor > span {
+	display: inline-block;
+}
+.full {
+	width: 0;
+	overflow: hidden;
+}
+.anchor:hover .full{
+	width: auto;
+}
+
+
+
+.placeholder {
+	height:500px;
+	width: 100%;
+}

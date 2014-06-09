@@ -1,0 +1,1 @@
+angular.module("templates", []).run(["$templateCache", function($templateCache) {$templateCache.put("home.html","<div>\n	<span>Agnieszk<span><span>a</span><span>+</span><span>R<span><span>icardo</span>\n<div>\n\n\n<div>\n	<p>Language: {{content.wedding}}</p>\n	<p>User: {{user}}</p>\n</div>");}]);
