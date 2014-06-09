@@ -1,0 +1,28 @@
+{
+  "name": "ra-wedding",
+  "main": "app.js",
+  "version": "0.0.0",
+  "authors": [
+    "jessie <jessie@apollo.com.ph>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "angular": "~1.2.14",
+    "angular-route": "~1.2.14",
+    "ng-parallax": "~0.1.7",
+    "bootstrap": "~3.1.1",
+    "angular-ui-router": "~0.2.10",
+    "lodash": "~2.4.1",
+    "skrollr": "~0.6.26",
+    "skrollr-menu": "~0.1.12"
+  }
+}
