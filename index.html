@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='ra-wedding'>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -7,33 +7,77 @@
     <link href="lib.css" rel="stylesheet">
     <link href="app.css" rel="stylesheet">
   </head>
-  <body ng-app="ra-wedding" skrollr>
+  <body skrollr>
+    
+    <div ui-view class='hidden'>
+    </div>
 
-    <div class="container-fluid" ui-view>
 
-      <div class='intro' data-0='height:100%' data-100p='position:fixed; height:60px'>
-        <span class='anchor'>
-          <span class='full'>Agnieszk</span><span class='initial'>a</span>
+    <div
+      class="parallax-image-wrapper parallax-image-wrapper-120"
+      data-anchor-target="#intro + .gap"
+      data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+      data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+      <div
+        class="parallax-image parallax-image-120"
+        style="background-image:url(assets/img/session2.png)"
+        data-anchor-target="#intro + .gap"
+        data-bottom-top="transform: translate3d(0px, -60%, 0px);"
+        data-top-bottom="transform: translate3d(0px, 60%, 0px);"
+      ></div>
+      <!--the +/-80% translation can be adjusted to control the speed difference of the image-->
+    </div>
+
+
+
+
+      <div class='nav' ui-jq='scrollupbar' data-0="opacity:0;" data-20p="opacity:1;" style="position:fixed; height:60px; width:100%; top:0;left:0; background:red; z-index:100;" >
+        <div class='anchor' data-0='position:absolute; top:50%; left:50%;' >
+          <span class='aga' ui-sref="home({language:'pl'})">
+            <span class='full'>Agnieszk</span><span class='initial'>a</span>
+          </span>
           <span>+</span>
-          <span class='initial'>R</span><span class='full'>icardo</span>
-        </span>
+          <span class='ricardo' ui-sref="home({language:'pt'})">
+            <span class='initial'>R</span><span class='full'>icardo</span>
+          </span>
+        </div>
+        <!--
+        <a href='#story' du-scrollspy du-smooth-scroll>Story</a>
+        <a href='#invite' du-scrollspy du-smooth-scroll>Invite</a>
+        <a href='#venue' du-scrollspy du-smooth-scroll>Venue</a>
+        -->
       </div>
 
-      <div href='story' class='placeholder'>
-        Story PH
-      </div>
+      <!--div class='navContainer' data-0='opacity:0' data-100p='opacity:1' style='position:fixed; height:60px; width:100%; top:0;left:0; background:blue;' >
+        <div class='nav' ui-jq='scrollupbar' style="position:fixed; height:60px; width:100%; top:0;left:0; background:red;" >
+          <a href='#story'>Story</a>
+          <a href='#invite'>Invite</a>
+          <a href='#venue'>Venue</a>
+        </div>
+      </div-->
 
-      <div class='placeholder'>
-        Invite PH
-      </div>
+    <div id='skrollr-body'>
 
-      <div class='placeholder'>
-        Venue PH
-      </div>
+      <p id='intro' class="placeholder" data-0p="opacity:1;" data-20p="opacity:0;">Intro</p>
 
-      <div class='placeholder'>
-        Accomodation PH
-      </div>
+      <div class="gap gap-120" style="background-image:url(assets/img/session2.png);"></div>
+  
+      <p id='story'  class='placeholder' style='background:red;'>{{content.story}}</p>
+  
+      <div class="gap gap-100" style="background-image:url(assets/img/session2.png);"></div>
+
+      <p id='invite' class='placeholder' style='background:green;'>{{content.invitation}}</p>
+
+      <div class="gap gap-100" style="background-image:url(assets/img/session2.png);"></div>
+
+      <p id='venue'  style="background:blue" class='placeholder'>
+        {{content.venue}}
+      </p>
+
+      <p class='placeholder' style="background:magenta;">
+        {{content.accomodation}}
+      </p>
 
       <div class='placeholder'>
         Fotos PH
@@ -45,6 +89,7 @@
       </div>  
 
     </div>
+
     <script src="lib.js"></script>
     <script src="templates.js"></script>
     <script src="app.js"></script>
