@@ -1,38 +1,145 @@
-.intro {
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+* {
+	padding:0;
+	margin:0;
+}
+
+html, body {
+	line-height: 1;
+	min-height:100%;
 	height:100%;
-	width:100%;
-	background:#AFAFAF;
-	color:#FFFFFF;
-	position:absolute;
+}
+
+body{
+	font-family: 'Open Sans',Verdana, Arial, sans-serif;
+	font-weight:400;
+}
+
+.skrollr-desktop body {
+	height: 100% !important;
+}
+
+#container {
+	height:100%;
+}
+
+.active{
+	background: green;
+}
+
+
+.placeholder{
+	height:100%;
+}
+
+
+#navigation{
+	position:fixed; 
+	height:60px; 
+	width:100%; 
 	top:0;
-	left: 0;
-	vertical-align: middle;
-	text-align: center;
+	left:0; 
+	background:red; 
+	z-index:100;
 }
 
-.anchor {
-	font-size:50px;
-	text-transform: uppercase;
-	top:50%;
-	display: inline-block;
-	position: relative;
-	margin-top: -25px;
-}
 
-.anchor > span {
-	display: inline-block;
-}
-.full {
-	width: 0;
-	overflow: hidden;
-}
-.anchor:hover .full{
-	width: auto;
+#intro {
+	height:100%;
+	background:cyan;
+	position:fixed;
+	width:100%;
 }
 
 
 
-.placeholder {
-	height:500px;
-	width: 100%;
+
+
+
+
+.parallax-image-wrapper {
+	position:fixed;
+	left:0;
+	width:100%;
+	overflow:hidden;
 }
+
+.parallax-image-wrapper-50 {
+	height:50%;
+	top:-50%;
+}
+
+.parallax-image-wrapper-100 {
+	height:100%;
+	top:-100%;
+}
+
+.parallax-image-wrapper-120 {
+	height:120%;
+	top:-120%;
+}
+
+.parallax-image {
+	display:none;
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+
+.parallax-image-50 {
+	height:200%;
+	top:-50%;
+}
+
+.parallax-image-100 {
+	height:100%;
+	top:0;
+}
+
+.parallax-image-120 {
+	height:120%;
+	top:0;
+}
+
+.parallax-image.skrollable-between {
+	display:block;
+}
+
+.no-skrollr .parallax-image-wrapper {
+	display:none !important;
+}
+
+#skrollr-body {
+	height:100%;
+	overflow:visible;
+	position:relative;
+}
+
+.gap {
+	background:transparent center no-repeat;
+	background-size:cover;
+}
+
+.skrollr .gap {
+	background:transparent !important;
+}
+
+.gap-50 {
+	height:50%;
+}
+
+.gap-100 {
+	height:100%;
+}
+
+.gap-120 {
+	height:120%;
+}
+
+
+

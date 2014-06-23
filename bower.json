@@ -15,14 +15,24 @@
     "tests"
   ],
   "devDependencies": {},
+  "overrides": {
+    "skrollr-menu": {
+      "main": [
+        "./dist/skrollr.menu.min.js"
+      ]
+    }
+  },
   "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.1.1",
+    "lodash": "~2.4.1",
+    "skrollr": "~0.6.26",
+    "skrollr-menu": "~0.1.12",
+    "scroll-up-bar": "~0.1.0",
     "angular": "~1.2.14",
     "angular-route": "~1.2.14",
     "ng-parallax": "~0.1.7",
-    "bootstrap": "~3.1.1",
-    "angular-ui-router": "~0.2.10",
-    "lodash": "~2.4.1",
-    "skrollr": "~0.6.26",
-    "skrollr-menu": "~0.1.12"
+    "angular-ui-utils": "bower",
+    "angular-ui-router": "~0.2.10"
   }
 }
