@@ -1,0 +1,32 @@
+[
+	{
+		"url": "http://www.hotelbb.pt",
+		"name": "B&B Hotels",
+		"imgUrl": "http://www.hotelbb.pt/media/100/Image/hotelEvora/hotelEvora_1.jpg"
+	},
+	{
+		"url": "http://pt.hoteis.com/ho233195/convento-do-espinheiro-hotel-spa-evora-portugal/",
+		"name": "Convento do Espinheiro Hotel",
+		"imgUrl": "http://exp.cdn-hotels.com/hotels/2000000/1210000/1209500/1209483/1209483_253_z.jpg"
+	},
+	{
+		"url": "http://pt.hoteis.com/ho229860/pousada-de-evora-loios-evora-portugal/",
+		"name": "Pousada dos Loios",
+		"imgUrl": "http://exp.cdn-hotels.com/hotels/2000000/1140000/1137600/1137566/1137566_17_z.jpg"
+	},
+	{
+		"url": "http://pt.hoteis.com/ho178789/ibis-evora-evora-portugal/",
+		"name": "Ibis",
+		"imgUrl": "http://exp.cdn-hotels.com/hotels/1000000/30000/23100/23006/23006_51_b.jpg"
+	},
+	{
+		"url": "http://pt.hoteis.com/ho299770/vitoria-stone-hotel-evora-portugal/",
+		"name": "Vitoria Stone Hotel",
+		"imgUrl" : "http://exp.cdn-hotels.com/hotels/3000000/2690000/2689500/2689478/2689478_82_z.jpg"
+	},
+	{
+		"url": "http://pt.hoteis.com/ho292731/hotel-dom-fernando-evora-portugal/",
+		"name": "Hotel Dom Fernando",
+		"imgUrl" : "http://exp.cdn-hotels.com/hotels/3000000/2140000/2130300/2130265/2130265_1_b.jpg"
+	}
+]
