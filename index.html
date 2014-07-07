@@ -7,40 +7,18 @@
     <link href="lib.css" rel="stylesheet">
     <link href="app.css" rel="stylesheet">
   </head>
-  <body skrollr>
+  <body skrollr ng-class="language">
     
     <div ui-view class='hidden'>
     </div>
 
 
-    <div
-      class="parallax-image-wrapper parallax-image-wrapper-120"
-      data-anchor-target="#intro + .gap"
-      data-bottom-top="transform:translate3d(0px, 200%, 0px)"
-      data-top-bottom="transform:translate3d(0px, 0%, 0px)">
-
-      <div
-        class="parallax-image parallax-image-120"
-        style="background-image:url(assets/img/session2.png)"
-        data-anchor-target="#intro + .gap"
-        data-bottom-top="transform: translate3d(0px, -60%, 0px);"
-        data-top-bottom="transform: translate3d(0px, 60%, 0px);"
-      ></div>
-      <!--the +/-80% translation can be adjusted to control the speed difference of the image-->
-    </div>
-
-
-
-
-      <div class='nav' ui-jq='scrollupbar' data-0="opacity:0;" data-20p="opacity:1;" style="position:fixed; height:60px; width:100%; top:0;left:0; background:red; z-index:100;" >
-        <div class='anchor' data-0='position:absolute; top:50%; left:50%;' >
-          <span class='aga' ui-sref="home({language:'pl'})">
-            <span class='full'>Agnieszk</span><span class='initial'>a</span>
-          </span>
-          <span>+</span>
-          <span class='ricardo' ui-sref="home({language:'pt'})">
-            <span class='initial'>R</span><span class='full'>icardo</span>
-          </span>
+      <div id='navigation' class='nav' ui-jq='scrollupbar' data-0="opacity:0;" data-20p="opacity:1;" >
+        <span class="aga names" ng-click="switchLanguage('pl')">Agnieszka</span> / <span class="ric names" ng-click="switchLanguage('pt')">Ricardo</span>
+        <div id="anchors">
+          <a du-scrollspy du-smooth-scroll href="#intro">Entrada</a>
+          <a du-scrollspy  du-smooth-scroll href="#story">História</a>
+          <a  du-scrollspy du-smooth-scroll href="#invite">Convite</a>
         </div>
         <!--
         <a href='#story' du-scrollspy du-smooth-scroll>Story</a>
@@ -58,35 +36,103 @@
       </div-->
 
     <div id='skrollr-body'>
+    
 
-      <p id='intro' class="placeholder" data-0p="opacity:1;" data-20p="opacity:0;">Intro</p>
-
-      <div class="gap gap-120" style="background-image:url(assets/img/session2.png);"></div>
-  
-      <p id='story'  class='placeholder' style='background:red;'>{{content.story}}</p>
-  
-      <div class="gap gap-100" style="background-image:url(assets/img/session2.png);"></div>
-
-      <p id='invite' class='placeholder' style='background:green;'>{{content.invitation}}</p>
-
-      <div class="gap gap-100" style="background-image:url(assets/img/session2.png);"></div>
-
-      <p id='venue'  style="background:blue" class='placeholder'>
-        {{content.venue}}
-      </p>
-
-      <p class='placeholder' style="background:magenta;">
-        {{content.accomodation}}
-      </p>
-
-      <div class='placeholder'>
-        Fotos PH
+      <div id="intro" data-0p="opacity:1; display:block;" data-20p="opacity:0;" data-100p="display:none;">
+        <div class='anchor'>
+          <span class="aga names" ng-click="switchLanguage('pl')">Agnieszka<div>(Polaco)</div></span> / <span class="ric names" ng-click="switchLanguage('pt')">Ricardo<div>(Português)</div></span>
+        </div>
       </div>
 
-      <div>
-        <p>Guest: {{guest}}</p>
-        <p>Test: {{content.wedding}}</p>
-      </div>  
+      <img class="parallax" src="assets/img/veronica2.png" y="background" alt="" du-parallax style="width:100%;"></img>
+
+      <p id="veronica" class="direct" >Olá! Eu sou a Veronica...</p>
+
+      <div id="parents" class="inverse">
+        <img data-bottom-center="margin-left:-45%;" data-center-center="margin-left:0%;" id="mom" src="assets/img/aga.png"/>
+        <span>Estes são os meus pais.</span>
+        <img data-bottom-center="margin-right:-45%;" data-center-center="margin-right:0%;" id="dad" src="assets/img/ricardo.png"/>
+      </div>
+
+      <p id="story" class="direct">
+        Eles conheceram-se em Varsóvia, ou é o que eles me contam...
+      </p>
+
+      <img class="parallax" src="assets/img/varsovia.png" y="background" alt="" du-parallax style="width:100%;"></img>
+
+      <p class="direct">
+        Depois de muitos, muitos quilómetros entre Portugal e a Polónia e muitas horas no Skype, decidiram viver juntos em Portugal...
+      </p>
+
+      <div id="europe">
+        <img src="assets/img/europe.png">
+      </div>
+
+      <p id="baby" class="direct">
+        Isto foi tudo antes de eu nascer!  
+      </p>
+
+      <img class="parallax" du-parallax src="assets/img/veronica_baby.png" y="background" alt=""></img>
+      
+      <p class="direct">
+        Depois fui crescendo e agora que vou fazer 4 anos comecei a perguntar... Porque é que a mãe não se chama Agnieszka Pomar? ;)
+      </p>
+
+      <img class="parallax" src="assets/img/aga_pomar.png" y="background" alt="" du-parallax ></img>
+
+      <p id="invite" class="direct">
+        Acho que foi por isso que eles decidiram... marcar o casamento! Vai ser no dia...
+      </p>
+
+      <p id="date" class="inverse" data-bottom-center="font-size:50px;" data-center-center="font-size:120px;"> 
+        06.09.2014
+      </p>
+
+      <p class="direct">
+        Gostava muito que viessem! Acho que eles também iam ficar muito contentes.
+      </p>
+
+      <div id="chalk" class=" direct separator">
+        <img class="parallax" src="assets/img/veronica_date.png" y="rolling" alt="" du-parallax style="width:100%;"></img>
+      </div>
+  
+      <p id="venue" class=" inverse" >
+      O casamento vai ser no <a  target="_blank" class="direct highlight" href="http://www.evorahotel.pt/">Évora Hotel</a>, e quem quiser pode ficar lá a dormir, ou a brincar ou outras coisas que o hotel tem.
+      </p>
+
+      <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.pt/maps/ms?gl=pt&amp;ptab=2&amp;ie=UTF8&amp;oe=UTF8&amp;msa=0&amp;msid=201681957757175863216.0004e085cc8a1f970ac61&amp;t=h&amp;ll=38.56374,-7.932864&amp;spn=0,0&amp;output=embed"></iframe>
+
+      <p  class="inverse">
+      Têm é que dizer que são convidados para o casamento da Agnieszka e Ricardo para as... (como é que se diz isto?)... con-di-ções... especiais!
+      </p>
+
+      <p class='direct'>
+        Quem não quiser ficar no Evorahotel, pode dormir noutros sítios.
+      </p>
+
+      <div id="hotels" class="inverse row">
+        <div class=" col-xs-4" ng-repeat="h in hotels">
+          <a ng-href="{{h.url}}" class="inverse highlight shadow"  target="_blank">
+            <img ng-src="{{h.imgUrl}}"/>
+            <span class="direct name">{{h.name}}</span>
+            <span class="direct transparent"></span>
+          </a>
+        </div>
+      </div>
+
+      <p class='direct'>
+        Façam-lhe uma surpresa e confirmem se vão, o mais rápido possível!
+      </p>
+
+      <p class="inverse">
+        <a href="mailto:agnieszka.ricardo@gmail.com" class="inverse highlight">agnieszka.ricardo@gmail.com</a>
+      </p>
+
+       <img class="parallax" src="assets/img/session2.png" y="background" alt="" du-parallax ></img>
+
+      <p class="direct">
+        Beijinhos!!!
+      </p>
 
     </div>
 

@@ -1,8 +1,20 @@
 {
+
 	"pt":{
-		"wedding" : "casamento"
+
+		"text":{
+
+		},
+
+		"nav":{
+
+		}
+		
 	},
+
+
 	"pl":{
-		"wedding" : "ślub"
+
 	}
+
 }
