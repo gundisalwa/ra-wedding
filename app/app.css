@@ -19,7 +19,7 @@ body{
 	background-color: #FFF;
 }
 body.pl{
-	background-color: #e91e63;
+	background-color: #fc9d9a;
 }
 body.pt{
 	background-color: #5677fc;
@@ -49,7 +49,7 @@ body.pt{
 	font-size:20px;
 
 	color: #FFF;
-	background: #455a64;
+	background: #506873;
 
 	-webkit-box-shadow: 0 6px 10px -3px #424242;
 	box-shadow: 0 6px 10px -3px #424242;
@@ -69,7 +69,7 @@ body.pt{
 	color: #FFF;
 }
 .aga:hover {
-	color: #e91e63;
+	color: #fc9d9a;
 }
 .ric:hover {
 	color: #5677fc;
@@ -90,7 +90,7 @@ a {
 
 .pl .direct,
 .pl a.direct{
-	background-color: #e91e63;
+	background-color: #fc9d9a;
 	color: #FFF;
 }
 .pt .direct,
@@ -103,7 +103,7 @@ a {
 }
 .pl .inverse,
 .pl a.inverse {
-	color: #e91e63;
+	color: #fc9d9a;
 }
 .pt .inverse,
 .pt a.inverse {
@@ -144,7 +144,7 @@ a {
 #intro {
 	position: relative;
 	height:100%;
-	background: #455a64;
+	background: #506873;
 	position:fixed;
 	width:100%;
 	color: #FFF;
