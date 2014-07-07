@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC);
 
 * {
 	padding:0;
@@ -12,7 +12,7 @@ html, body {
 }
 
 body{
-	font-family: 'Open Sans',Verdana, Arial, sans-serif;
+	font-family: 'Amatic SC',Verdana, Arial, sans-serif;
 	font-weight:400;
 	font-size: 50px;
 	color: #455a64;
@@ -22,7 +22,7 @@ body.pl{
 	background-color: #fc9d9a;
 }
 body.pt{
-	background-color: #5677fc;
+	background-color: #03a9f4;
 }
 
 .skrollr-desktop body {
@@ -72,7 +72,7 @@ body.pt{
 	color: #fc9d9a;
 }
 .ric:hover {
-	color: #5677fc;
+	color: #03a9f4;
 }
 
 p{
@@ -95,7 +95,7 @@ a {
 }
 .pt .direct,
 .pt a.direct{
-	background-color: #5677fc;
+	background-color: #03a9f4;
 	color:#fff;
 }
 .inverse {
@@ -107,7 +107,7 @@ a {
 }
 .pt .inverse,
 .pt a.inverse {
-	color: #5677fc;
+	color: #03a9f4;
 }
 .pl .direct.highlight:hover{
 		background: #ff4081;
@@ -187,34 +187,24 @@ a {
 	position: relative;
 	display:block;
 	float:left;
-	height:500px;
+	height:400px;
 	padding:0;
 	width:100%;
 	padding:0 30%;
 	vertical-align: middle;
+	overflow: hidden;
+}
+#parents div{
+	width:170%;
+	height:100%;
+	position: absolute;
 }
 #parents img {
 	height:100%;
-	width:30%;
+	display: block;
+	float:left;
 }
-#parents span {
-	position:relative;
-	display: inline-block;
-	top:40%;
-	height:0;
-	text-align: center;
-	padding:0 40px;
-}
-#mom{
-	position:absolute;
-	top:0;
-	left:0;
-}
-#dad{
-	position:absolute;
-	top: 0;
-	right: 0;
-}
+
 
 #europe {
 	width:100%;
