@@ -44,6 +44,8 @@ gulp.task('assets', function(){
     //concatenate vendor CSS files
     gulp.src('./app/assets/**/*.*')
         .pipe(gulp.dest('./build/assets'));
+    gulp.src('./app/fonts/**/*.*')
+        .pipe(gulp.dest('./build/fonts'));
 });
 
 gulp.task('copy-index', function() {
