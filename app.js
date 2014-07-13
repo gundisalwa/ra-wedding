@@ -4,47 +4,29 @@
 	var app = angular.module('ra-wedding', [ 'templates', 'ui.router', 'ui.utils', 'duScroll', 'duParallax' ]);
 
 
-
 	app.config(function ($stateProvider, $urlRouterProvider) {
-  	$urlRouterProvider.otherwise('/pt/guest');
+  	$urlRouterProvider.otherwise('/');
 
-  	$stateProvider.state('home',{
-  		url:'^/{language}/{guest}',
-  		resolve:{
-	      'GuestsData':function(Guests){
-	        return Guests.promise;
-	      },
-	      'LanguagesData':function(Languages){
-	        return Languages.promise;
-	      },
+  	$stateProvider
+    .state('home',{
+      url:'/',
+      template:'<div ui-view/>',
+      resolve:{
+        'LanguagesData':function(Languages){
+          return Languages.promise;
+        },
         'HotelsData': function(Hotels){
           return Hotels.promise;
         }
-	    },
-  		controller: 'WeddingCtrl'
+      },
+      controller: 'WeddingCtrl'
+    })
+    .state('home.language',{
+  		url:'{language}',
+  		controller: 'LanguageCtrl'
   	});
   });
 
-	app.service('Guests', function($http) {
-    var guestsData = null;
-
-    var promise = $http.get('assets/json/guests.json').success(function (data) {
-      guestsData = data;
-    });
-
-    function getGuest(id){
-    	return isGuest(id) ? guestsData[id] : guestsData.guest;
-    }
-
-    function isGuest(id){
-    	return guestsData.hasOwnProperty(id);
-    }
-
-    return {
-      promise:promise,
-      getGuest: getGuest
-    };
-	});
 
   app.service('Hotels', function($http) {
     var hotelsData = null;
@@ -86,22 +68,28 @@
 	});
 
 
-	app.controller('WeddingCtrl', function($rootScope, $stateParams, $state, Guests, Languages, Hotels, parallaxHelper){
-
-    $rootScope.background = parallaxHelper.createAnimator(-0.3, 150, -150);
-    $rootScope.rolling = parallaxHelper.createAnimator(0.3, 1000, -1000);
-
-		$rootScope.guest = Guests.getGuest( $stateParams.guest );
+  app.controller('LanguageCtrl', function($rootScope, $stateParams, $state, Languages){
     $rootScope.language = $stateParams.language;
-		$rootScope.content = Languages.getData( $stateParams.language );
+    $rootScope.content = Languages.getData( $stateParams.language );
+  });
+
+	app.controller('WeddingCtrl', function($rootScope, $stateParams, $state, Languages, Hotels, parallaxHelper){
+
+    $rootScope.background = parallaxHelper.createAnimator(-0.3, 300, -300);
+    $rootScope.rolling = parallaxHelper.createAnimator(0.3, 1000, -1000);
 
     $rootScope.hotels = Hotels.getHotels();
 
 		$rootScope.switchLanguage = function(lang){
-			$state.go('home', {language:lang, guest:$stateParams.guest});
+			$state.go('home.language', {language:lang});
 		};
 
+    $rootScope.getStyle = function(hotel){
+      
+    };
+
 	});
+
 
 	app.directive('skrollr', function(){
 		// Runs during compile
@@ -117,5 +105,6 @@
 			}
 		};
 	});
-	  
+	 
+
 })();

@@ -22,6 +22,32 @@ Acomodação – Zakwaterowanie
 Contactos – Kontakty 
 
 
+[
+	{
+		"url": "http://www.hotelbb.pt",
+		"name": "Some Hotel"
+	},
+	{
+		"url": "http://pt.hoteis.com/ho233195/convento-do-espinheiro-hotel-spa-evora-portugal/",
+		"name": "Some Hotel"
+	},
+	{
+		"url": "http://pt.hoteis.com/ho229860/pousada-de-evora-loios-evora-portugal/",
+		"name": "Some Hotel"
+	},
+	{
+		"url": "http://pt.hoteis.com/ho178789/ibis-evora-evora-portugal/",
+		"name": "Some Hotel"
+	},
+	{
+		"url": "http://pt.hoteis.com/ho299770/vitoria-stone-hotel-evora-portugal/",
+		"name": "Some Hotel"
+	},
+	{
+		"url": "http://pt.hoteis.com/ho292731/hotel-dom-fernando-evora-portugal/",
+		"name": "Some Hotel"
+	}
+]
 
 "Olá! Eu sou a Veronica..."
 
@@ -35,7 +61,9 @@ Contactos – Kontakty
 "06.09.2014!"
 "Eles não sabem que vos estou a dizer, mas gostava muito que vocês estivessem lá todos. Acho que eles vão ficar muito muito contentes!"
 
-"O casamento vai ser num hotel, e quem quiser pode dormir lá, ou brincar ou outras coisas que o hotel tem. Têm é que dizer que são convidados para o casamento da Agnieszka e Ricardo para as... (como é que se diz isto?)... con-di-ções... especiais!"
+"O casamento vai ser num hotel, e quem quiser pode dormir lá, ou brincar ou outras coisas que o hotel tem." 
+
+"Têm é que dizer que são convidados para o casamento da Agnieszka e Ricardo para as... (como é que se diz isto?)... con-di-ções... especiais!"
 
 "Quem não quiser ficar no Evorahotel, pode dormir noutros sítios, como:"
 

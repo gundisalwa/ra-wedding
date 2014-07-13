@@ -3,17 +3,45 @@
 	"pt":{
 
 		"text":{
+			"veronica": "Olá eu sou a Verónica!",
+			"parents":  "Estes são os meu pais.",
+			"meeting":  "Eles conheceram-se em Varsóvia, ou é o que eles me contam...",
+			"moving":   "Depois de muitos, muitos km entre Portugal e a Polónia e muitas horas no skype, decidiram viver juntos em Portugal.",
+			"birth":    "Isto foi tudo antes de eu nascer!",
+			"growing":  "Depois fui crescendo e comecei a perguntar....Porquê que a mãe não se chama Agnieszka Pomar?",
+			"wedding":  "Acho que foi por isso que eles decidiram marcar o casamento! Vai ser no dia:",
+			"day":      "06-09-2014",
+			"invite":   "Gostava muito que viessem! Acho que eles também, Iam ficar muito contentes.",
+			"kisses":   ""
 
 		},
 
-		"nav":{
+		"labels":{
 
 		}
-		
+
 	},
 
 
 	"pl":{
+
+		"text":{
+			"veronica": "Cześć, jestem Veronica!",
+			"parents":  "A to są moi Rodzice.",
+			"meeting":  "Poznali się w Warszawie..., a przynajmniej tak mi powiedzieli.",
+			"moving":   "Po wielu podróżach pomiędzy Portugalią a Polską i wielu godzinach przegadanych na Skype, zdecydowali się zamieszkać razem w Portugalii.",
+			"birth":    "To wszystko zdarzyło się zanim ja się urodziłam!",
+			"growing":  "Potem podrosłam i zaczęłam zadawać trudne pytania... Dlaczego mama nie nazywa się Agnieszka Pomar?",
+			"wedding":  "Myślę, że właśnie dlatego zdecydowali się pobrać! Stanie się to dnia:",
+			"day":      "06.09.2014r",
+			"invite":   "Mam nadzieję, że będziesz wówczas z Nami! Moi Rodzice na pewno też bardzo by tego chcieli.",
+			"kisses":   ""
+
+		},
+
+		"labels":{
+			
+		}
 
 	}
 

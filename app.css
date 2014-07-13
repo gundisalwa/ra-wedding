@@ -17,6 +17,8 @@ body{
 	font-size: 50px;
 	color: #455a64;
 	background-color: #FFF;
+
+	overflow-x:hidden;
 }
 body.pl{
 	background-color: #fc9d9a;
@@ -44,7 +46,7 @@ body.pt{
 	width:100%; 
 	top:0;
 	left:0; 
-	z-index:100;
+	z-index:5000;
 
 	font-size:20px;
 
@@ -56,6 +58,13 @@ body.pt{
 
 }
 
+.pl #navigation {
+	background-color: #fc9d9a;
+}
+.pt #navigation {
+	background-color: #03a9f4;
+}
+
 #anchors {
 	position:absolute;
 	top: 0;
@@ -63,17 +72,26 @@ body.pt{
 	height:100%;
 }
 
+#anchors a {
+	text-decoration: none;
+	color:#FFF;
+	background:none;
+	padding:0 10px;
+}
+#anchors a.active,
+#anchors a:hover {
+	font-size: 1.1em;
+}
+
 
 .names{
 	cursor:pointer;
 	color: #FFF;
 }
-.aga:hover {
-	color: #fc9d9a;
+.names:hover{
+	font-size:1.1em;
 }
-.ric:hover {
-	color: #03a9f4;
-}
+
 
 p{
 	background: transparent;
@@ -109,11 +127,15 @@ a {
 .pt a.inverse {
 	color: #03a9f4;
 }
+.highlight {
+			-webkit-transition: all 0.3s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+          transition: all 0.3s ease-out;
+}
 .pl .direct.highlight:hover{
 		background: #ff4081;
 }
 .pt .direct.highlight:hover{
-	background: #6889ff;
+		background: #6889ff;
 }
 .pl .inverse.highlight:hover{
 	color: #ff4081;
@@ -153,17 +175,59 @@ a {
 	text-align:center;
 	vertical-align: middle;
 }
+
+#intro .upArrow {
+	position:absolute;
+	width: 100%;
+	top:10px;
+	left: 0;
+}
+
+#intro .downArrow {
+	position: absolute;
+	width: 100%;
+	bottom:10px;
+	left: 0;
+}
+
+#intro .upArrow div{
+	font-size: 20px;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	top:100%;
+	left: 0;
+}
+
+#intro .downArrow div{
+	font-size: 20px;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	bottom:60%;
+	left: 0;
+}
+
 #intro .anchor {
 	position: absolute;
 	width: 100%;
 	top:50%;
 	margin-top:-70px;
 }
-#intro span{
+#intro .anchor span{
 	height: 100%;
 	display:inline-block;
-	cursor: pointer;
 	position: relative;
+
+	-webkit-transition: all 0.5s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+          transition: all 0.5s ease-out;
+
+  width:auto;
+
+}
+#intro .aga, #intro .ric {
+	cursor: pointer;
+	width: 300px;
 }
 #intro span div {
 	position:absolute;
@@ -180,7 +244,30 @@ a {
 	visibility: visible;
 }
 
+.pt #intro .aga,
+.pl #intro .ric,
+.pt #intro .sep,
+.pl #intro .sep {
+	opacity: 0.5;
+}
 
+.pl #intro {
+	background-color: #fc9d9a;
+}
+.pt #intro {
+	background-color: #03a9f4;
+}
+
+#intro .aga:hover {
+	color: #fc9d9a;
+}
+#intro .ric:hover {
+	color: #03a9f4;
+}
+.pl #intro .names:hover,
+.pt #intro .names:hover{
+	color:#FFF;
+}
 
 
 #parents {
@@ -195,7 +282,7 @@ a {
 	overflow: hidden;
 }
 #parents div{
-	width:170%;
+	width:400%;
 	height:100%;
 	position: absolute;
 }
@@ -208,10 +295,25 @@ a {
 
 #europe {
 	width:100%;
+	position:relative;
 }
 #europe img {
-	width:100%;
+	height:515px;
 }
+#europe .pathOverlay{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width:100%;
+	height:515px;
+	overflow:hidden;
+}
+#europe .pathOverlay img{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
 
 #date{
 	padding:80px 20%;
@@ -270,7 +372,6 @@ a {
 	text-align: right;
 }
 #hotels span.name{
-	color:#FFF;
 	z-index:400;
 	background-color: transparent;
 }
@@ -292,5 +393,29 @@ a {
 .skrollr .gap {
 	background:transparent !important;
 }
+
+
+
+.upArrow:before{
+	content:'\2039';
+	font-size:80px;
+	display:inline-block;
+
+	-webkit-transform: rotate(90deg);  
+	  	-ms-transform: rotate(90deg);  
+	      	transform: rotate(90deg);
+}
+
+.downArrow:before{
+	content:'\2039';
+	font-size:80px;
+	display:inline-block;
+
+	-webkit-transform: rotate(-90deg);  
+	  	-ms-transform: rotate(-90deg);  
+	      	transform: rotate(-90deg);
+}
+
+
 
 
