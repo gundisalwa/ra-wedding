@@ -299,6 +299,7 @@ a {
 }
 #europe img {
 	height:515px;
+	width:100%;
 }
 #europe .pathOverlay{
 	position: absolute;
