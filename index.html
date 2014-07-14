@@ -7,7 +7,7 @@
     <link href="lib.css" rel="stylesheet">
     <link href="app.css" rel="stylesheet">
   </head>
-  <body  ng-class="language">
+  <body  ng-class="language" ng-cloak>
     
     <div ui-view class='hidden'>
     </div>
@@ -24,12 +24,12 @@
       <div id='navigation' class='nav'  data-0="opacity:0;" data-20p="opacity:1;" >
         <span class="aga names" ng-click="switchLanguage('pl')">Agnieszka</span> / <span class="ric names" ng-click="switchLanguage('pt')">Ricardo</span>
         <div id="anchors">
-          <a du-scrollspy du-smooth-scroll href="#intro">Entrada</a>
-          <a du-scrollspy du-smooth-scroll href="#story">História</a>
-          <a du-scrollspy du-smooth-scroll href="#invite">Convite</a>
-          <a du-scrollspy du-smooth-scroll href="#venue">Local</a>
-          <a du-scrollspy du-smooth-scroll href="#lodging">Alojamento</a>
-          <a du-scrollspy du-smooth-scroll href="#contacts">Contactos</a>
+          <a du-scrollspy du-smooth-scroll href="#intro">{{ content.labels.intro }}</a>
+          <a du-scrollspy du-smooth-scroll href="#story">{{ content.labels.story }}</a>
+          <a du-scrollspy du-smooth-scroll href="#invite">{{ content.labels.invite }}</a>
+          <a du-scrollspy du-smooth-scroll href="#venue">{{ content.labels.venue }}</a>
+          <a du-scrollspy du-smooth-scroll href="#lodging">{{ content.labels.lodging }}</a>
+          <a du-scrollspy du-smooth-scroll href="#contacts">{{ content.labels.contacts }}</a>
         </div>
         <!--
         <a href='#story' du-scrollspy du-smooth-scroll>Story</a>
@@ -51,7 +51,7 @@
 
         <div id="intro" ng-class="{ init: !language}"  data-0p="opacity:1; display:block;" data-20p="opacity:0;" data-100p="display:none;">
 
-          <span class="upArrow arrows"><div class="navHelp">(Barra de Navegação)</div> </span>
+          <span class="upArrow arrows"><div class="navHelp">(Pasek Nawigacyjny / Barra de Navegação)</div> </span>
 
           <div class='anchor'>
             <span class="aga names" ng-click="switchLanguage('pl')">Agnieszka<div>(Polski)</div></span> <span class="sep">/</span> <span class="ric names" ng-click="switchLanguage('pt')">Ricardo<div>(Português)</div></span>
@@ -139,17 +139,26 @@
           </div>
       
           <p id="venue" class=" inverse" >
-          O casamento vai ser no <a  target="_blank" class="direct highlight" href="http://www.evorahotel.pt/">Évora Hotel</a>, e quem quiser pode ficar lá a dormir, ou a brincar ou outras coisas que o hotel tem.
+          {{ content.text.venue1 }} <a  target="_blank" class="direct highlight" href="http://www.evorahotel.pt/">Évora Hotel</a>{{ content.text.venue2 }}.
           </p>
+          <div class="inverse" id="special">
+            <ul>
+              <li>{{ content.text.single }}</li>
+              <li>{{ content.text.double }}</li>
+            </ul>
+          </div>
 
-          <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.pt/maps/ms?gl=pt&amp;ptab=2&amp;ie=UTF8&amp;oe=UTF8&amp;msa=0&amp;msid=201681957757175863216.0004e085cc8a1f970ac61&amp;t=h&amp;ll=38.56374,-7.932864&amp;spn=0,0&amp;output=embed"></iframe>
+          <div id="venuecontainer">
+            <img src='http://www.evorahotel.pt/img/galeriaHotel/11.jpg'/>
+            <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.pt/maps/ms?gl=pt&amp;ptab=2&amp;ie=UTF8&amp;oe=UTF8&amp;msa=0&amp;msid=201681957757175863216.0004e085cc8a1f970ac61&amp;t=h&amp;ll=38.56374,-7.932864&amp;spn=0,0&amp;output=embed"></iframe>
+          </div>
 
           <p  class="inverse">
-          Têm é que dizer que são convidados para o casamento da Agnieszka e Ricardo para as... (como é que se diz isto?)... con-di-ções... especiais!
+          {{ content.text.venue3 }}
           </p>
 
           <p class='inverse' id="lodging">
-            Quem não quiser ficar no Evorahotel, pode dormir noutros sítios.
+            {{ content.text.hotels }}
           </p>
 
           <div id="hotels" class="direct row">
@@ -163,7 +172,7 @@
           </div>
 
           <p class='inverse'>
-            Façam-lhe uma surpresa e confirmem se vão, o mais rápido possível!
+            {{ content.text.surprise }}
           </p>
 
           <p class="direct" id="contacts">
@@ -173,7 +182,7 @@
            <img class="parallax" src="assets/img/session2.png" y="background" alt="" du-parallax ></img>
 
           <p class="inverse">
-            Beijinhos!!!
+            {{ content.text.kisses }}
           </p>
 
         </div>

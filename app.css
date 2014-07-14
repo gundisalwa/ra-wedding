@@ -336,6 +336,31 @@ a {
 }
 
 
+#venuecontainer {
+	position: relative;
+	width: 100%;
+	height: 600px;
+}
+
+#venuecontainer > * {
+	position:absolute;
+	width:100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 1;
+
+		-webkit-transition: all 0.5s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+          transition: all 0.5s ease-out;
+}
+
+#venuecontainer > iframe:not(:hover),
+#venuecontainer > img:hover {
+	opacity:0;
+}
+
+
+
 #hotels {
 	padding: 50px 10%;
 }
@@ -418,6 +443,20 @@ a {
 	      	transform: rotate(-90deg);
 }
 
+#special{
+	text-align: center;
+	padding-bottom: 20px;
+}
+ul {
+	display: inline-block;
+}
+.pt li{
+	list-style-image: url('assets/img/pt_heart.svg');
+}
+.pl li{
+	list-style-image: url('assets/img/pl_heart.svg');
+}
 
-
-
+[ng-cloak]{
+	display:none !important;
+}
