@@ -10,14 +10,26 @@
 			"birth":    "Isto foi tudo antes de eu nascer!",
 			"growing":  "Depois fui crescendo e comecei a perguntar....Porquê que a mãe não se chama Agnieszka Pomar?",
 			"wedding":  "Acho que foi por isso que eles decidiram marcar o casamento! Vai ser no dia:",
-			"day":      "06-09-2014",
+			"day":      "06-09-2014 : 16h30",
 			"invite":   "Gostava muito que viessem! Acho que eles também, Iam ficar muito contentes.",
-			"kisses":   ""
+			"venue1":   "O casamento vai ser no",
+			"venue2":   ", e quem quiser pode ficar lá a dormir, o hotel oferece preços especiais:",
+			"single":   "Quarto individual: 63 Euro",
+			"double":   "Quarto duplo: 68 Euro",
+			"venue3":   "Têm é que dizer que são convidados do casamento da Agnieszka e Ricardo.",
+			"hotels":   "Quem não quiser ficar no Evorahotel, pode dormir noutros sítios.",
+			"surprise": "Façam-lhes uma surpresa e confirmem se vão, o mais rápido possível!",
+			"kisses":   "Beijinhos!!!"
 
 		},
 
 		"labels":{
-
+			"intro":    "Entrada",    
+			"story":    "História",         
+			"invite":   "Convite", 
+			"venue":    "Local",
+			"lodging":  "Alojamento",   
+			"contacts": "Contactos"
 		}
 
 	},
@@ -33,14 +45,26 @@
 			"birth":    "To wszystko zdarzyło się zanim ja się urodziłam!",
 			"growing":  "Potem podrosłam i zaczęłam zadawać trudne pytania... Dlaczego mama nie nazywa się Agnieszka Pomar?",
 			"wedding":  "Myślę, że właśnie dlatego zdecydowali się pobrać! Stanie się to dnia:",
-			"day":      "06.09.2014r",
+			"day":      "06.09.2014r : 16h30",
 			"invite":   "Mam nadzieję, że będziesz wówczas z Nami! Moi Rodzice na pewno też bardzo by tego chcieli.",
-			"kisses":   ""
+			"venue1":   "Ślub odbędzie się w",
+			"venue2":   "Dla Gości którzy chcieliby pozostać tam na noc, Hotel przygotował ceny specjalne:",
+			"single":   "pokój 1-osobowy 63 Euro",
+			"double":   "pokój 2-osobowy 68 Euro",
+			"venue3":   "Podczas dokonywania rezerwacji prosimy o podanie informacji, iż jesteście Państwo Gośćmi na ślubie Agnieszki i Ricardo.",
+			"hotels":   "Inne opcje noclegu prezentujemy w zakładce Zakwaterowanie.",
+			"surprise": "Złóż im niespodziankę i zostanie potwierdzone, tak szybko, jak to możliwe!",
+			"kisses":   "Buziaki!!"
 
 		},
 
 		"labels":{
-			
+			"intro":    "Wejście",    
+			"story":    "Historia",         
+			"invite":   "Zaproszenie", 
+			"venue":    "Miejsce Ślubu",
+			"lodging":  "Zakwaterowanie",   
+			"contacts": "Kontakty"
 		}
 
 	}
