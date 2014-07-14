@@ -460,3 +460,13 @@ ul {
 [ng-cloak]{
 	display:none !important;
 }
+
+#fallback{
+	height:100%;
+	width:100%;
+}
+
+#fallback p {
+	font-size: 40px;
+	text-align: center;
+}
