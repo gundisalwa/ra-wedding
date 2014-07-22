@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Amatic+SC);
 
 * {
 	padding:0;
@@ -39,6 +38,47 @@ body.pt{
 	background: green;
 }
 
+#sound{
+	position:fixed;
+	top:0;
+	right:0;
+	z-index:6000;
+	color: #FFF;
+	height:50px;
+	line-height:45px;
+	padding-right:15px;
+}
+
+#sound span{
+	display: inline-block;
+	font-size: 20px;
+	cursor:pointer;
+	vertical-align: middle;
+		-webkit-transition: all 0.3s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+          transition: all 0.3s ease-out;
+}
+#sound span:before{ 
+
+}
+#sound:not(.playing) #play:hover:before,
+#sound.playing #play:before{
+	content: "\e072";
+}
+#sound.playing #play:hover:before,
+#sound:not(.playing) #play:before{
+	content: "\e073";
+}
+#sound:not(.mute) #volume:before,
+#sound.mute #volume:hover:before {
+	content: "\e038";
+}
+#sound.mute #volume:before,
+#sound:not(.mute) #volume:hover:before {
+	content: "\e036";
+}
+
+
+
 #navigation{
 	position:fixed; 
 	height:50px; 
@@ -53,7 +93,6 @@ body.pt{
 	color: #FFF;
 	background: #506873;
 
-	-webkit-box-shadow: 0 6px 10px -3px #424242;
 	box-shadow: 0 6px 10px -3px #424242;
 
 }
@@ -70,6 +109,7 @@ body.pt{
 	top: 0;
 	right: 0;
 	height:100%;
+	padding-right:85px;
 }
 
 #anchors a {
@@ -237,11 +277,14 @@ a {
 	font-size: 20px;
 	height: 40px;
 	display: inline-block;
-	visibility: hidden;
+	opacity: 0;
 	text-align: center;
+
+			-webkit-transition: all 0.3s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+          transition: all 0.3s ease-out;
 }
 #intro span:hover div{
-	visibility: visible;
+	opacity: 1;
 }
 
 .pt #intro .aga,
@@ -249,6 +292,11 @@ a {
 .pt #intro .sep,
 .pl #intro .sep {
 	opacity: 0.5;
+}
+
+#intro .aga:hover,
+#intro .ric:hover{
+	opacity: 1;
 }
 
 .pl #intro {

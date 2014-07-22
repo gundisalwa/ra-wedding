@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html ng-app='ra-wedding'>
+<html ng-app="ra-wedding">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>ra-wedding</title>    
+    <link href="http://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet" type="text/css">
     <link href="lib.css" rel="stylesheet">
     <link href="app.css" rel="stylesheet">
   </head>
   <body  ng-class="language" ng-cloak>
     
-    <div ui-view class='hidden'>
+    <div ui-view class="hidden">
     </div>
 
 
@@ -20,11 +21,20 @@
 
     </div>
 
+    <div class='hidden'>
+      <youtube-video id="wedding-vid" video-url="weddingVideo"></youtube-video>
+    </div>
+
     <div skrollr class="hidden-xs">
 
-      <div id='navigation' class='nav'  data-0="opacity:0;" data-20p="opacity:1;" >
+      <div id="sound" ng-class="{ playing: playerStatus.playing, mute: playerStatus.mute}" >
+          <span ng-click="togglePlay()"  id="play"  class="glyphicon"></span>
+          <span ng-click="toggleSound()" id="volume" class="glyphicon glyphicon-volume-off"></span>
+      </div>
+
+      <div id="navigation" class="nav"  data-0="opacity:0;" data-20p="opacity:1;" >
         <span class="aga names" ng-click="switchLanguage('pl')">Agnieszka</span> / <span class="ric names" ng-click="switchLanguage('pt')">Ricardo</span>
-        <div id="anchors">
+        <div id="anchors" >
           <a du-scrollspy du-smooth-scroll href="#intro">{{ content.labels.intro }}</a>
           <a du-scrollspy du-smooth-scroll href="#story">{{ content.labels.story }}</a>
           <a du-scrollspy du-smooth-scroll href="#invite">{{ content.labels.invite }}</a>
@@ -33,28 +43,28 @@
           <a du-scrollspy du-smooth-scroll href="#contacts">{{ content.labels.contacts }}</a>
         </div>
         <!--
-        <a href='#story' du-scrollspy du-smooth-scroll>Story</a>
-        <a href='#invite' du-scrollspy du-smooth-scroll>Invite</a>
-        <a href='#venue' du-scrollspy du-smooth-scroll>Venue</a>
+        <a href="#story" du-scrollspy du-smooth-scroll>Story</a>
+        <a href="#invite" du-scrollspy du-smooth-scroll>Invite</a>
+        <a href="#venue" du-scrollspy du-smooth-scroll>Venue</a>
         -->
       </div>
 
-      <!--div class='navContainer' data-0='opacity:0' data-100p='opacity:1' style='position:fixed; height:60px; width:100%; top:0;left:0; background:blue;' >
-        <div class='nav' ui-jq='scrollupbar' style="position:fixed; height:60px; width:100%; top:0;left:0; background:red;" >
-          <a href='#story'>Story</a>
-          <a href='#invite'>Invite</a>
-          <a href='#venue'>Venue</a>
+      <!--div class="navContainer" data-0="opacity:0" data-100p="opacity:1" style="position:fixed; height:60px; width:100%; top:0;left:0; background:blue;" >
+        <div class="nav" ui-jq="scrollupbar" style="position:fixed; height:60px; width:100%; top:0;left:0; background:red;" >
+          <a href="#story">Story</a>
+          <a href="#invite">Invite</a>
+          <a href="#venue">Venue</a>
         </div>
       </div-->
 
-      <div id='skrollr-body'  >
+      <div id="skrollr-body"  >
 
 
         <div id="intro" ng-class="{ init: !language}"  data-0p="opacity:1; display:block;" data-20p="opacity:0;" data-100p="display:none;">
 
           <span class="upArrow arrows"><div class="navHelp">(Pasek Nawigacyjny / Barra de Navegação)</div> </span>
 
-          <div class='anchor'>
+          <div class="anchor">
             <span class="aga names" ng-click="switchLanguage('pl')">Agnieszka<div>(Polski)</div></span> <span class="sep">/</span> <span class="ric names" ng-click="switchLanguage('pt')">Ricardo<div>(Português)</div></span>
           </div>
   
@@ -64,32 +74,32 @@
 
         <div ng-class="{hidden: !language}">
 
-          <img class="parallax" src="assets/img/veronica2.png" y="background" alt="" du-parallax style="width:100%;"></img>
+          <img class="parallax" src="assets/img/veronica2.jpg" y="background" alt="" du-parallax style="width:100%;"></img>
 
           <p id="veronica" class="inverse" >{{ content.text.veronica }} <br>{{ content.text.parents }}</p>
 
 
           <div id="parents" class="inverse">
             <div data-bottom-top="right:-100%;" data-top-bottom="right:-300%;">
-            <img src="assets/img/parents1.png"/>
+            <img src="assets/img/parents1.jpg"/>
             <img src="assets/img/parents4.png"/>
-            <img src="assets/img/parents3.png"/>
-            <img src="assets/img/parents2.png"/>
+            <img src="assets/img/parents3.jpg"/>
+            <img src="assets/img/parents2.jpg"/>
             <img src="assets/img/parents5.png"/>
-            <img src="assets/img/parents1.png"/>
+            <img src="assets/img/parents1.jpg"/>
             <img src="assets/img/parents4.png"/>
-            <img src="assets/img/parents3.png"/>
-            <img src="assets/img/parents2.png"/>
+            <img src="assets/img/parents3.jpg"/>
+            <img src="assets/img/parents2.jpg"/>
             <img src="assets/img/parents5.png"/>
-            <img src="assets/img/parents1.png"/>
+            <img src="assets/img/parents1.jpg"/>
             <img src="assets/img/parents4.png"/>
-            <img src="assets/img/parents3.png"/>
-            <img src="assets/img/parents2.png"/>
+            <img src="assets/img/parents3.jpg"/>
+            <img src="assets/img/parents2.jpg"/>
             <img src="assets/img/parents5.png"/>
-            <img src="assets/img/parents1.png"/>
+            <img src="assets/img/parents1.jpg"/>
             <img src="assets/img/parents4.png"/>
-            <img src="assets/img/parents3.png"/>
-            <img src="assets/img/parents2.png"/>
+            <img src="assets/img/parents3.jpg"/>
+            <img src="assets/img/parents2.jpg"/>
             <img src="assets/img/parents5.png"/>
             </div>
           </div>
@@ -98,7 +108,7 @@
             {{content.text.meeting}}
           </p>
 
-          <img class="parallax" src="assets/img/varsovia.png" y="background" alt="" du-parallax style="width:100%;"></img>
+          <img class="parallax" src="assets/img/varsovia.jpg" y="background" alt="" du-parallax style="width:100%;"></img>
 
           <p class="inverse">
             {{ content.text.moving }}
@@ -115,13 +125,13 @@
             {{ content.text.birth }}
           </p>
 
-          <img class="parallax" du-parallax src="assets/img/veronica_baby.png" y="background" alt=""></img>
+          <img class="parallax" du-parallax src="assets/img/veronica_baby.jpg" y="background" alt=""></img>
           
           <p class="inverse">
             {{ content.text.growing }} ;)
           </p>
 
-          <img class="parallax" src="assets/img/aga_pomar.png" y="background" alt="" du-parallax ></img>
+          <img class="parallax" src="assets/img/aga_pomar.jpg" y="background" alt="" du-parallax ></img>
 
           <p id="invite" class="inverse">
             {{ content.text.wedding }}
@@ -136,7 +146,7 @@
           </p>
 
           <div id="chalk" class=" inverse separator">
-            <img class="parallax" src="assets/img/veronica_date.png" y="rolling" alt="" du-parallax style="width:100%;"></img>
+            <img class="parallax" src="assets/img/veronica_date.jpg" y="rolling" alt="" du-parallax style="width:100%;"></img>
           </div>
       
           <p id="venue" class=" inverse" >
@@ -150,7 +160,7 @@
           </div>
 
           <div id="venuecontainer">
-            <img src='http://www.evorahotel.pt/img/galeriaHotel/11.jpg'/>
+            <img src="http://www.evorahotel.pt/img/galeriaHotel/11.jpg"/>
             <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.pt/maps/ms?gl=pt&amp;ptab=2&amp;ie=UTF8&amp;oe=UTF8&amp;msa=0&amp;msid=201681957757175863216.0004e085cc8a1f970ac61&amp;t=h&amp;ll=38.56374,-7.932864&amp;spn=0,0&amp;output=embed"></iframe>
           </div>
 
@@ -158,7 +168,7 @@
           {{ content.text.venue3 }}
           </p>
 
-          <p class='inverse' id="lodging">
+          <p class="inverse" id="lodging">
             {{ content.text.hotels }}
           </p>
 
@@ -172,7 +182,7 @@
             </div>
           </div>
 
-          <p class='inverse'>
+          <p class="inverse">
             {{ content.text.surprise }}
           </p>
 
@@ -180,7 +190,7 @@
             <a href="mailto:agnieszka.ricardo@gmail.com" class="direct highlight">agnieszka.ricardo@gmail.com</a>
           </p>
 
-           <img class="parallax" src="assets/img/session2.png" y="background" alt="" du-parallax ></img>
+           <img class="parallax" src="assets/img/session2.jpg" y="background" alt="" du-parallax ></img>
 
           <p class="inverse">
             {{ content.text.kisses }}
@@ -193,7 +203,7 @@
     </div>
 
     <script src="lib.js"></script>
-    <script src="templates.js"></script>
+    <!--script src="templates.js"></script-->
     <script src="app.js"></script>
   </body>
 </html>

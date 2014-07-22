@@ -33,6 +33,7 @@
     "angular-route": "~1.2.14",
     "ng-parallax": "~0.1.7",
     "angular-ui-utils": "bower",
-    "angular-ui-router": "~0.2.10"
+    "angular-ui-router": "~0.2.10",
+    "angular-youtube-mb": "~0.0.1"
   }
 }
